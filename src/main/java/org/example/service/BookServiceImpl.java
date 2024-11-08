@@ -7,6 +7,7 @@ import org.example.repository.BookRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 @RequiredArgsConstructor
@@ -17,7 +18,11 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public List<Book> getall() {
-        return null;
+        List<Book> bookArrayList = new ArrayList<>();
+        repository.findAll().forEach(entity ->{
+            bookArrayList.add(mapper.map(entity, Book.class));
+        });
+        return bookArrayList;
     }
 
     @Override

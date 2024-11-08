@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin
 @RestController
 @RequestMapping("book")
@@ -15,9 +17,9 @@ public class BookController {
     @Autowired
     final BookService service;
 
-    @GetMapping("/get-book")
-    public Book getBook(){
-        return new Book(1,"kitten","novel","david",2000,10);
+    @GetMapping("/get-all")
+    public List<Book> getBook(){
+        return service.getall();
     }
 
     @PostMapping("/add-book")
