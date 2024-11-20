@@ -1,9 +1,10 @@
-package org.example.service;
+package org.example.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.example.dto.Member;
 import org.example.entity.MemberEntity;
 import org.example.repository.MemberRepository;
+import org.example.service.MemberService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
