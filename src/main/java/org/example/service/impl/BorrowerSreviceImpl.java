@@ -1,12 +1,8 @@
 package org.example.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.example.dto.Book;
 import org.example.dto.Borrower;
-import org.example.dto.Member;
-import org.example.entity.BookEntity;
 import org.example.entity.BorrowerEntity;
-import org.example.entity.MemberEntity;
 import org.example.repository.BorrowerRepository;
 import org.example.service.BorrowerService;
 import org.modelmapper.ModelMapper;

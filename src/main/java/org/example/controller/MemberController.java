@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.dto.Book;
 import org.example.dto.Member;
@@ -24,7 +25,7 @@ public class MemberController {
     }
 
     @PostMapping("/add-member")
-    public void addMember(@RequestBody Member member){
+    public void addMember(@Valid @RequestBody Member member){
         service.addMember(member);
     }
 

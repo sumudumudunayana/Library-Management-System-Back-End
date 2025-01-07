@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.dto.Book;
 import org.example.dto.Borrower;
@@ -25,7 +26,7 @@ public class BorrowerController {
     }
 
     @PostMapping("/add-borrower")
-    public void addBorrower(@RequestBody Borrower borrower){
+    public void addBorrower(@Valid @RequestBody Borrower borrower){
         service.addBorrower(borrower);
     }
 

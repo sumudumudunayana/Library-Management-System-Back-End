@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.dto.Book;
 import org.example.service.BookService;
@@ -23,7 +24,7 @@ public class BookController {
     }
 
     @PostMapping("/add-book")
-    public void addBook(@RequestBody Book book){
+    public void addBook(@Valid @RequestBody Book book){
         service.addBook(book);
     }
 
